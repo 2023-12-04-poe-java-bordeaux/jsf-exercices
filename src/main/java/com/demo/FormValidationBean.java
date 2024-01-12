@@ -33,9 +33,10 @@ public class FormValidationBean {
     }
 
     // methode exécutée lorsque le remplissage du formulaire est correct
-    public void formValidated(){
+    public String formValidated(){
         formValide = true;
         System.out.println("ICI traitement apres acceptation du formulaire");
+        return "formValidated";
     }
 
     public boolean isFormValide() {

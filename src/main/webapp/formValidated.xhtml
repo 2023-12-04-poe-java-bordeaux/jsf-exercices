@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+    <title>Données du formulaire</title>
+</h:head>
+<h:body>
+    <h2>Données soumises par le formulaire</h2>
+    <h:panelGrid columns="2">
+        <h:outputText value="Nom d'utilisateur:" />
+        <h:outputText value="#{formValidationBean.username}" />
+
+        <h:outputText value="Email:" />
+        <h:outputText value="#{formValidationBean.email}" />
+
+        <h:outputText value="Âge:" />
+        <h:outputText value="#{formValidationBean.age}" />
+    </h:panelGrid>
+
+    <!-- affiche form.xhtml -->
+    <!-- outcome : envoie une requete GET sans aucune donnée du formulaire -->
+    <h:button value="Retour au formulaire" outcome="form" />
+</h:body>
+</html>
