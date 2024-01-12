@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+    <title>Démo ui:repeat</title>
+</h:head>
+<h:body>
+    <h3>Liste de Noms</h3>
+    <ul>
+        <ui:repeat value="#{personBean.names}" var="name">
+            <li>#{name}</li>
+        </ui:repeat>
+    </ul>
+</h:body>
+</html>
