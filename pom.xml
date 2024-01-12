@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.demo</groupId>
+	<artifactId>jakarta10-JSF-starter</artifactId>
+	<version>0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+	<name>demoJSF</name>
+	<description>
+		demoJSF
+	</description>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.report.sourceEncoding>UTF-8</project.report.sourceEncoding>
+		<maven.compiler.release>17</maven.compiler.release>
+		<jakartaee-api.version>10.0.0</jakartaee-api.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>jakarta.platform</groupId>
+			<artifactId>jakarta.jakartaee-core-api</artifactId>
+			<version>${jakartaee-api.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
+		<dependency>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
+			<version>6.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+
+
+		<!-- JSF API -->
+		<dependency>
+			<groupId>jakarta.faces</groupId>
+			<artifactId>jakarta.faces-api</artifactId>
+			<version>4.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- JSF Implementation -->
+		<dependency>
+			<groupId>org.glassfish</groupId>
+			<artifactId>jakarta.faces</artifactId>
+			<version>4.0.4</version>
+		</dependency>
+
+
+		<!-- une implementation de Jakarta CDI -->
+		<dependency>
+			<groupId>org.jboss.weld.servlet</groupId>
+			<artifactId>weld-servlet-core</artifactId>
+			<version>4.0.1.Final</version>
+		</dependency>
+		<!-- Dépendance pour Jakarta Injection -->
+		<dependency>
+			<groupId>jakarta.inject</groupId>
+			<artifactId>jakarta.inject-api</artifactId>
+			<version>2.0.1</version>
+		</dependency>
+		<!-- Dépendance pour Jakarta CDI -->
+		<dependency>
+			<groupId>jakarta.enterprise</groupId>
+			<artifactId>jakarta.enterprise.cdi-api</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<finalName>demoJSF</finalName>
+	</build>
+</project>

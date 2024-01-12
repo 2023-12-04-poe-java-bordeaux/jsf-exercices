@@ -1,0 +1,13 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+    <title>Page 2</title>
+</h:head>
+<h:body>
+    <h:form>
+        <h:outputText value="Vous êtes sur la Page 2." />
+        <h:commandButton value="Retour à l'accueil" action="sitepage0?faces-redirect=true" />
+        <h:commandButton value="Aller à la Page 1" action="#{monNavigationController.goToPage1}" />
+    </h:form>
+</h:body>
+</html>
