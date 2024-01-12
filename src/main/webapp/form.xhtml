@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <title>Validation de formulaire</title>
+</h:head>
+<h:body>
+    <h:form>
+        <h:outputText value="Validation: #{formValidationBean.formValide}" />
+
+        <h:panelGrid columns="3">
+            <h:outputLabel for="username" value="Nom d'utilisateur:" />
+            <h:inputText id="username" value="#{formValidationBean.username}"
+                         validatorMessage="doit être compris entre 5 et 10 caractères"
+                         required="true" requiredMessage="Champ obligatoire">
+                <f:validateLength minimum="5" maximum="10"/>
+            </h:inputText>
+            <h:message for="username" />
+
+            <h:outputLabel for="email" value="Email:" />
+            <h:inputText id="email" value="#{formValidationBean.email}"
+                         validatorMessage="doit contenir une email valide">
+                <f:validateRegex pattern="^[\w.%+-]+@[\w.-]+\.[a-zA-Z]{2,6}$"/>
+            </h:inputText>
+            <h:message for="email" />
+
+            <h:outputLabel for="age" value="Âge:" />
+            <h:inputText id="age" value="#{formValidationBean.age}"
+                         validatorMessage="doit être entre 18 et 99">
+                <f:validateLongRange minimum="18" maximum="99"/>
+            </h:inputText>
+            <h:message for="age" />
+        </h:panelGrid>
+
+        <h:commandButton value="Valider" action="#{formValidationBean.formValidated}" />
+    </h:form>
+</h:body>
+</html>
