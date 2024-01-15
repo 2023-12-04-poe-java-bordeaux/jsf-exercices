@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+    <title>Blog</title>
+</h:head>
+<h:body>
+
+    <h1>Blog</h1>
+
+    <h:form>
+         <h:panelGrid columns="3">
+            <h:outputLabel for="titre" value="titre:" />
+            <h:inputText id="titre" value="#{billetFormBean.titre}"
+                         required="true" requiredMessage="Champ obligatoire">
+            </h:inputText>
+            <h:message for="titre" />
+
+             <h:outputLabel for="contenu" value="contenu:" />
+             <h:inputTextarea id="contenu" value="#{billetFormBean.contenu}"
+                              rows="6" cols="30"/>
+
+             <h:message for="contenu" />
+        </h:panelGrid>
+
+        <h:commandButton value="Valider" action="#{blog.submitForm()}" />
+    </h:form>
+
+
+</h:body>
+</html>
