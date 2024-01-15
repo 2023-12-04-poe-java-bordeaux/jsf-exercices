@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+    <title>Textarea</title>
+</h:head>
+<h:body>
+
+    <h1>Textarea</h1>
+
+
+    <h:form>
+       <h:outputLabel for="commentaire"/>
+
+        <h:inputTextarea id="commentaire" value="#{textareaBean.comment}"
+                            rows="6" cols="30"/>
+
+        <h:commandButton value="Envoyer" action="#{textareaBean.submit()}"/>
+    </h:form>
+
+</h:body>
+</html>
