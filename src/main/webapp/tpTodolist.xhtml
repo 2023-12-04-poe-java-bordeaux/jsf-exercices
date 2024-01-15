@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+    <title>Todolist</title>
+</h:head>
+<h:body>
+
+    <h1>Todolist</h1>
+
+    <h:form>
+         <h:panelGrid columns="3">
+            <h:outputLabel for="tache" value="Nouvelle tache:" />
+            <h:inputText id="tache" value="#{formTaskBean.tache}"
+                         required="true" requiredMessage="Champ obligatoire">
+            </h:inputText>
+            <h:message for="tache" />
+        </h:panelGrid>
+
+        <h:commandButton value="Valider" action="#{todolistBean.formSubmit(formTaskBean.tache)}" />
+    </h:form>
+
+
+    <ul>
+        <ui:repeat value="#{todolistBean.taches}" var="tache">
+            <li>#{tache}</li>
+        </ui:repeat>
+    </ul>
+
+
+</h:body>
+</html>
