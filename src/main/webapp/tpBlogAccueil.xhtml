@@ -12,7 +12,11 @@
 
     <ul>
         <ui:repeat value="#{blog.billets}" var="billet">
-            <li>#{billet.titre}</li>
+            <li>
+                <h:link value="#{billet.titre}" outcome="tpBlogDetails.xhtml">
+                    <f:param name="id" value="#{billet.id}"/>
+                </h:link>
+            </li>
         </ui:repeat>
     </ul>
 

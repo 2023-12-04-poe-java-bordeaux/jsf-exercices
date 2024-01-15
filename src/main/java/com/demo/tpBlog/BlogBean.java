@@ -31,4 +31,13 @@ public class BlogBean {
         addBillet(billet);
         return "tpBlogAccueil";
     }
+
+    public Billet getBilletById(int id){
+        for(Billet billet : billets){
+            if(billet.getId() == id){
+                return billet;
+            }
+        }
+        return null;
+    }
 }
